@@ -1,3 +1,4 @@
+controller ansible_host=192.168.178.228 ansible_ssh_pass=osboxes.org
 target1 ansible_host=192.168.178.222 ansible_ssh_pass=osboxes.org
 target2 ansible_host=192.168.178.67 ansible_ssh_pass=osboxes.org
 
