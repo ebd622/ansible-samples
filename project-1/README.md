@@ -1,4 +1,4 @@
-# Inventory and playbools
+# Inventory and playbooks
 
 Run module `ping` in command line
 ```
