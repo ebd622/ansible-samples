@@ -5,3 +5,7 @@
       copy:
         src: /tmp/test-copy.txt
         dest: ~/test-copy.txt
+    - name: Add a line to file
+      lineinfile:
+        path: ~/test-copy.txt
+        line: 'Line will be added just one time even if you run a playbook a few times'
