@@ -1,4 +1,4 @@
-# Inventory and playbooks
+## Inventory and playbooks
 
 Run module `ping` in command line
 ```
@@ -18,5 +18,16 @@ ansible-playbook playbook-copy.yaml -i inventory.txt
 ansible-playbook playbook-copy.yaml -i inventory.txt --user=osboxes
 ```
 
+## Modules
+Ansible modules are combined in different groups depending on provided functionalities.
+These are some moules:
+* System
+* Commands
+* Files
+* Database
+* Cloud
+* ...
+  
+More modules are here: https://docs.ansible.com/ansible/2.8/modules/list_of_all_modules.html
 
 
