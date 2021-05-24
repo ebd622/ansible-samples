@@ -12,7 +12,7 @@ ansible-playbook playbook-ping.yaml -i inventory.txt
 ansible-playbook playbook-ping.yaml -i inventory.txt --user=osboxes
 ```
 
-Copy a file to targets:
+[Copy](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html) a file to targets:
 ```
 ansible-playbook playbook-copy.yaml -i inventory.txt
 ansible-playbook playbook-copy.yaml -i inventory.txt --user=osboxes
