@@ -1,11 +1,15 @@
 - name: Copy file to targeta
   hosts: all
   tasks:
-    - name: Copy file
+    - name: 1. Create a folder
+      file:
+        path: ~/ansible_test
+        state: directory
+    - name: 2. Copy file
       copy:
         src: /tmp/test-copy.txt
-        dest: ~/test-copy.txt
-    - name: Add a line to file
+        dest: ~/ansible_test/test-copy.txt
+    - name: 3. Add a line to file
       lineinfile:
-        path: ~/test-copy.txt
+        path: ~/ansible_test/test-copy.txt
         line: 'Line will be added just one time even if you run a playbook a few times'
