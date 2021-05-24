@@ -30,4 +30,10 @@ These are some moules:
   
 More modules are here: https://docs.ansible.com/ansible/2.8/modules/list_of_all_modules.html
 
+## Variables
+
+```
+ansible-playbook playbook-vars.yaml -i inventory.txt --user=osboxes --extra-vars "line1='Override line1' line2='Override line2'"
+ansible-playbook playbook-vars.yaml -i inventory.txt --user=osboxes --extra-vars '{\"line1\"=\"Override line1\",\"line2\"=\"Override line2\"}'
+```
 

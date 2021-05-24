@@ -2,6 +2,8 @@
   hosts: all
   vars:
     dest_file: test-vars.txt
+    line1: Test line1
+    line2: Test line2
   vars_files:
     - vars.yml
   tasks:
@@ -13,7 +15,11 @@
       copy:
         src: test-vars.txt
         dest: ~/ansible_test/{{dest_file}}
-    - name: 3. Add a line to file
+    - name: 3. Add a line1 to file
       lineinfile:
         path: ~/ansible_test/{{dest_file}}
-        line: 'line {{target1_ip}}'
+        line: 'Added line:  {{line1}}'
+    - name: 4. Add a line2 to file
+      lineinfile:
+        path: ~/ansible_test/{{dest_file}}
+        line: 'Added line:  {{line2}}'
