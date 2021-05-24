@@ -1,0 +1,7 @@
+- name: Copy file to targeta
+  hosts: all
+  tasks:
+    - name: Copy file
+      copy:
+        src: /tmp/test-copy.txt
+        dest: ~/test-copy.txt
