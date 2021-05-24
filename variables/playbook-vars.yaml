@@ -1,5 +1,9 @@
 - name: Copy file to targeta
   hosts: all
+  vars:
+    dest_file: test-vars.txt
+  vars_files:
+    - vars.yml
   tasks:
     - name: 1. Create a folder
       file:
@@ -7,9 +11,9 @@
         state: directory
     - name: 2. Copy file
       copy:
-        src: test-copy.txt
-        dest: ~/ansible_test/test-copy.txt
+        src: test-vars.txt
+        dest: ~/ansible_test/{{dest_file}}
     - name: 3. Add a line to file
       lineinfile:
-        path: ~/ansible_test/test-copy.txt
-        line: 'Line will be added just one time even if you run a playbook a few times'
+        path: ~/ansible_test/{{dest_file}}
+        line: 'line {{target1_ip}}'
