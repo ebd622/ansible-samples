@@ -1,4 +1,4 @@
-## Variables
+## Conditions
 TODO
 
 ### Create a file
