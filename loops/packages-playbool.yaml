@@ -1,0 +1,20 @@
+- name: Install required packages
+  hosts: all
+  vars:
+    packages:
+      - httpd
+      - ksh
+#      - libaio
+#      - libXext
+#      - sysstat
+#      - mongodb
+#      - nodejs
+  become: yes  #sudo (root permissions are required)
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Install packages
+      yum:
+        name: '{{ item }}'
+        state: present
+      loop: '{{ packages }}'
