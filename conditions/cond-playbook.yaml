@@ -1,4 +1,4 @@
-- name: Copy file to targeta
+- name: Creae a file in targets with a Linux Distribution's name
   hosts: all
   vars:
     dest_file: test-cond.txt
