@@ -2,8 +2,7 @@
   hosts: all
   vars:
     dest_file: test-cond.txt
-    line1: Ubuntu
-    line2: CentOS
+    state: started # Default state (started)
   vars_files:
     - vars.yml
   become: yes  #sudo (install nginx requires root permissions)
@@ -18,7 +17,7 @@
         name: nginx
         state: present
 
-    - name: Start NGiNX
+    - name: 'Update state: {{state}}'
       service:
         name: nginx
-        state: started
+        state: '{{state}}'
