@@ -1,0 +1,4 @@
+target1 ansible_host={{target1_ip}} ansible_ssh_pass={{target1_pass}}
+target2 ansible_host={{target2_ip}} ansible_ssh_pass={{target2_pass}}
+
+

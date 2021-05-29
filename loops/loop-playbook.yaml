@@ -1,0 +1,28 @@
+- name: Add users to a file in a loop
+  hosts: all
+  vars:
+    dest_file: loop-cond.txt
+    users:
+      - user1
+      - user2
+      - user3
+      - user4
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Just print users
+      command: 'echo "{{ item }}"'
+      with_items: '{{ users }}'
+
+    - name: 1. Create a file
+      file:
+        path: ~/ansible_test/{{dest_file}}
+        state: touch
+
+    - name: 2. Add users
+      lineinfile:
+        path: ~/ansible_test/{{dest_file}}
+        line: 'User: "{{ item }}"'
+      loop: '{{ users }}'
+      #with_items: '{{ users }}' #another option: use with_*
+
