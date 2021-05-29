@@ -14,7 +14,7 @@
   vars_files:
     - vars.yml
   tasks:
-    - name: Just print users
+    - name: Just print users in a console
       command: 'echo "{{ item }}"'
       with_items: '{{ users }}'
 
