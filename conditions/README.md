@@ -1,2 +1,2 @@
-## Variables
+## Conditions
 TODO
