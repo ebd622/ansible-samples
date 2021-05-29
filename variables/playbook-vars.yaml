@@ -1,20 +1,16 @@
 - name: Copy file to targeta
   hosts: all
   vars:
-    dest_file: test-vars.txt
+    dest_file: test-conditions.txt
     line1: Test line1
     line2: Test line2
   vars_files:
     - vars.yml
   tasks:
-    - name: 1. Create a folder
+    - name: 1. Create a file
       file:
-        path: ~/ansible_test
-        state: directory
-    - name: 2. Copy file
-      copy:
-        src: test-vars.txt
-        dest: ~/ansible_test/{{dest_file}}
+        path: ~/ansible_test/{{dest_file}}
+        state: file
     - name: 3. Add a line1 to file
       lineinfile:
         path: ~/ansible_test/{{dest_file}}

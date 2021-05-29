@@ -1,0 +1,19 @@
+- name: Copy file to targeta
+  hosts: all
+  vars:
+    dest_file: test-cond.txt
+    line1: Ubuntu
+    line2: CentOS
+  vars_files:
+    - vars.yml
+  become: yes  #this means: sudo (install nginx requires root permissions)
+  tasks:
+    - name: Add epel-release repo
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
