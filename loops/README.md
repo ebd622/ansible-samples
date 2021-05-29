@@ -1,14 +1,18 @@
 ## Loops
-TODO
+Here are some examples on how to create loops
 
 ### Create a file with users
-File with user names will be created on targets
+Create a file with user names:
 ```
-ansible-playbook loop-playbook.yaml -i inventory.txt --user=osboxes
+ansible-playbook loop1-playbook.yaml -i inventory.txt --user=osboxes
+```
+Create a file with user name-s and uid-s: 
+```
+ansible-playbook loop2-playbook.yaml -i inventory.txt --user=osboxes
 ```
 
 ### Install packages
-Packages listed in var-s will be installed with `loop`:
+Install packages listed in var with `loop`:
 ```
 ansible-playbook packages-playbool.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org"
 ```

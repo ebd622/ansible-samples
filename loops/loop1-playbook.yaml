@@ -1,7 +1,7 @@
 - name: Add users to a file in a loop
   hosts: all
   vars:
-    dest_file: loop-cond.txt
+    dest_file: loop1-cond.txt
     users:
       - user1
       - user2
