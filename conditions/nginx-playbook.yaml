@@ -6,7 +6,7 @@
     line2: CentOS
   vars_files:
     - vars.yml
-  become: yes  #this means: sudo (install nginx requires root permissions)
+  become: yes  #sudo (install nginx requires root permissions)
   tasks:
     - name: Add epel-release repo
       yum:
