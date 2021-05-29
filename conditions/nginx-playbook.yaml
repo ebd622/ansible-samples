@@ -1,4 +1,4 @@
-- name: Copy file to targeta
+- name: Install and run Nginx
   hosts: all
   vars:
     dest_file: test-cond.txt
