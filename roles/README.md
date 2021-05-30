@@ -56,8 +56,6 @@ GALAXY_ROLE_SKELETON(default) = None
 GALAXY_ROLE_SKELETON_IGNORE(default) = ['^.git$', '^.*/.git_keep$']
 ```
 
-
-
 #### 2. Install a role
 
 ```
@@ -103,4 +101,11 @@ Specify a role as an array of dictionaries:
       become: yes
       vars:
         mysql_user_name: db-user
+```
+
+### Examples
+
+```
+ansible-playbook roles-playbook.yaml -i inventory.txt --user=osboxes
+ansible-playbook roles-playbook.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org
 ```

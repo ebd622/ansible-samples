@@ -4,6 +4,7 @@
     packages:
       - httpd
       - ksh
+      - rc
 #      - libaio
 #      - libXext
 #      - sysstat
