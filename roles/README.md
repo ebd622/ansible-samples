@@ -115,3 +115,15 @@ ansible-galaxy install acandid.mysql
 ```
 ansible-playbook mysql-playbook.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org
 ```
+
+#### Install and run Docker
+(Here are some details about the role: https://github.com/acandid/docker)
+
+##### 1. Install a role
+```
+ansible-galaxy install acandid.docker
+```
+##### 2. Deploy and start Docker on a target:
+```
+ansible-playbook docker-playbook.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org
+```
