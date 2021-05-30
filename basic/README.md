@@ -43,3 +43,41 @@ ansible-playbook playbook-vars.yaml -i inventory.txt --user=osboxes --extra-vars
 ansible-playbook playbook-vars.yaml -i inventory.txt --user=osboxes --extra-vars '{\"line1\"=\"Override line1\",\"line2\"=\"Override line2\"}'
 ```
 
+## Conditions
+TODO
+
+### Create a file
+Create a file `test-cond.txt` in targets with a Linux Distribution's name
+```
+ansible-playbook cond-playbook.yaml -i inventory.txt --user=osboxes
+```
+
+### Install and run Nginx
+Sudo password can be provided via a special ansible variable `ansible_sudo_pass`:
+```
+ansible-playbook nginx-playbook.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org
+```
+
+Stop Nginx:
+```
+ansible-playbook nginx-playbook.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org state=stopped"
+```
+
+## Loops
+Here are some examples on how to create loops
+
+### Create a file with users
+Create a file with user names:
+```
+ansible-playbook loop1-playbook.yaml -i inventory.txt --user=osboxes
+```
+Create a file with user name-s and uid-s:
+```
+ansible-playbook loop2-playbook.yaml -i inventory.txt --user=osboxes
+```
+
+### Install packages
+Install packages listed in var with `loop`:
+```
+ansible-playbook packages-playbool.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org"
+```
