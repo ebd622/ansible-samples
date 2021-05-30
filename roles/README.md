@@ -104,8 +104,14 @@ Specify a role as an array of dictionaries:
 ```
 
 ### Examples
+#### Install and run mysql server
+(Here are some details about the role: https://github.com/geerlingguy/ansible-role-mysql)
 
+##### 1. Install a role
 ```
-ansible-playbook roles-playbook.yaml -i inventory.txt --user=osboxes
-ansible-playbook roles-playbook.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org
+ansible-galaxy install acandid.mysql
+```
+##### 2. Deploy and start MySQL on a target:
+```
+ansible-playbook mysql-playbook.yaml -i inventory.txt --user=osboxes --extra-vars "ansible_sudo_pass=osboxes.org
 ```
