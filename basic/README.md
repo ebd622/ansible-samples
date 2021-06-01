@@ -1,5 +1,13 @@
 # Basic
 
+### TOC
+* Inventory and playbooks
+* Modules
+* Variables
+* Conditions
+* Loops
+
+
 ## Inventory and playbooks
 
 Run module `ping` in command line
