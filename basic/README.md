@@ -1,6 +1,5 @@
 # Basic
 
-### TOC
 * Inventory and playbooks
 * Modules
 * Variables
