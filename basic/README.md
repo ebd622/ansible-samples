@@ -2,7 +2,7 @@
 
 * Inventory and playbooks
 * Modules
-* Variables
+* [Variables](#variables)
 * [Conditions](#conditions)
 * [Loops](#loops)
 
