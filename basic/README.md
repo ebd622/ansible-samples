@@ -1,7 +1,7 @@
 # Basic
 
-* Inventory and playbooks
-* [Modules](#mudules)
+* [Inventory and playbooks](#inventory-and-playbooks)
+* [Modules](#modules)
 * [Variables](#variables)
 * [Conditions](#conditions)
 * [Loops](#loops)
